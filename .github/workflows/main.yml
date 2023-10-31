@@ -17,4 +17,4 @@ jobs:
         pip install -r requirements.txt
     - name: mypy
       run: |
-        mypy --ignore-missing-imports bookstore
+        mypy bookstore
