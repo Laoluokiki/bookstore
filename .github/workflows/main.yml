@@ -1,11 +1,11 @@
-name: Mypy
+name: Error Check
 
 on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Mypy
+    name: Begin Error Check
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python 3.8
@@ -15,6 +15,6 @@ jobs:
     - name: Install Dependencies
       run: |
         pip install -r requirements.txt
-    - name: mypy
+    - name: Initiating Error Check
       run: |
         mypy --ignore-missing-imports bookstore
